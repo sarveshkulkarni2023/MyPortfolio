@@ -57,7 +57,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2 group">
               <span className="font-display font-bold text-2xl text-neon-blue">S</span>
               <span className="hidden sm:block font-display text-xl font-bold tracking-wider text-white group-hover:text-neon-blue transition-colors">
-                arvesh.
+                arvesh Kulkarni.
               </span>
             </Link>
 

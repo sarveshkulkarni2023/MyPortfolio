@@ -48,7 +48,7 @@ export default function HeroSection() {
           className="flex-1 text-center md:text-left"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-sans font-bold tracking-tight mb-4 text-white">
-            Hi all, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Sarvesh</span>
+            Hi all, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Sarvesh Kulkarni</span>
             <span className="inline-block ml-3 origin-bottom-right animate-[wave_2.5s_infinite]">👋</span>
           </h1>
 
