@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="font-display text-sm font-semibold tracking-wider uppercase">
-              Command<span className="text-neon-blue">Center</span>
+            <span className="font-display text-sm font-semibold tracking-wider">
+              Sarvesh <span className="text-neon-blue">Kulkarni</span>
             </span>
             <span className="text-xs font-mono text-white/30">
               AI + Cybersecurity Engineering
@@ -38,12 +38,16 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="flex flex-col items-center md:items-end gap-1">
-            <Link to="/seo-guide" className="text-xs font-mono text-white/40 hover:text-neon-blue transition-colors flex items-center gap-1.5 mb-1 group">
-              <span className="w-1.5 h-1.5 rounded-full bg-neon-blue/80 group-hover:animate-ping" />
-              SEO Guide (2026)
-            </Link>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-lg hover:scale-125 hover:-translate-y-1 transition-all mb-1 focus:outline-none cursor-pointer filter drop-shadow-[0_0_8px_rgba(0,163,255,0.4)]"
+              title="Back to Top"
+              aria-label="Scroll to top"
+            >
+              👆🏻
+            </button>
             <span className="text-xs font-mono text-white/20">
-              © {currentYear} All rights reserved
+              © {currentYear} All rights reserved by Sarvesh Kulkarni
             </span>
             <span className="text-[10px] font-mono text-white/10">
               v1.0.0 // SYSTEM ONLINE
