@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Sitemap: https://sarveshkulkarni.in/sitemap.xml
+
+Sitemap: https://sarveshkulkarni1206.vercel.app/sitemap.xml
