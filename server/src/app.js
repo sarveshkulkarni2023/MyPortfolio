@@ -19,6 +19,7 @@ import messageRoutes from './routes/message.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
+app.set("trust proxy", 1);
 const prisma = new PrismaClient();
 
 // Security Headers: configure Helmet with strict CSP & Frame options
@@ -36,18 +37,16 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' }
 }));
 
-// CORS Configuration: enforce whitelisted origins securely (do not allow wildcards when credentials: true)
-const allowedOrigins = process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : ['http://localhost:5173'];
+// CORS Configuration
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: [
+    "http://localhost:5173",
+    "https://my-portfolio-pied-gamma.vercel.app",
+    "https://sarveshkulkarni1206.vercel.app"
+  ],
   credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 // Rate limiting: prevent abuse and brute force
