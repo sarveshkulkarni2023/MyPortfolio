@@ -54,7 +54,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link
+              to="/"
+              onClick={(e) => {
+                if (location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center gap-2 group"
+            >
               <span className="font-display font-bold text-2xl text-neon-blue">S</span>
               <span className="hidden sm:block font-display text-xl font-bold tracking-wider text-white group-hover:text-neon-blue transition-colors">
                 arvesh Kulkarni.
