@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neon-blue: #3b82f6;
+    --neon-cyan: #0ea5e9;
+    --neon-purple: #6366f1;
+    --neon-pink: #ec4899;
+    --neon-green: #10b981;
+    --cyber-black: #030712;
+    --cyber-darker: #020617;
+    --cyber-dark: #0f172a;
+    --cyber-mid: #1e293b;
+    --glass-border: rgba(255, 255, 255, 0.05);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #fff;
+  }
+
+  body {
+    background: var(--cyber-black);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass-light backdrop-blur-md border border-white/5 rounded-xl;
+  }
+
+  .glass-panel-strong {
+    @apply bg-glass-medium backdrop-blur-lg border border-white/10 rounded-xl;
+  }
+
+  .neon-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .neon-border-strong {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .neon-text {
+    color: var(--neon-blue);
+  }
+
+  .neon-glow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .neon-glow-strong {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .cyber-grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-neon-purple;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-shadow-neon {
+    text-shadow: none;
+  }
+
+  .text-shadow-neon-strong {
+    text-shadow: none;
+  }
+}
